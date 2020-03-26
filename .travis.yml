@@ -6,9 +6,9 @@ services:
   # Travis install a copy of docker
 
 before_install:
-  - docker build -t gustavosr98/CURSO-Docker-TravisCI -f Dockerfile.dev .
+  - docker build -t gustavosr98/curso-docker-travisci -f Dockerfile.dev .
   # Test container build
 
 script:
-  - docker run gustavosr98/CURSO-Docker-TravisCI npm run test -- --coverage
+  - docker run gustavosr98/curso-docker-travisci npm run test -- --coverage
   # Excute tests
