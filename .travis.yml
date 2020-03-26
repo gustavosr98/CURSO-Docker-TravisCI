@@ -7,3 +7,8 @@ services:
 
 before_install:
   - docker build -t gustavosr98/CURSO-Docker-TravisCI -f Dockerfile.dev .
+  # Test container build
+
+script:
+  - docker run gustavosr98/CURSO-Docker-TravisCI npm run test -- --coverage
+  # Excute tests
