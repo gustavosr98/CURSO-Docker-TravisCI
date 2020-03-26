@@ -1,0 +1,9 @@
+sudo: required
+# Because we are using docker
+
+services:
+  - docker
+  # Travis install a copy of docker
+
+before_install:
+  - docker build -t gustavosr98/CURSO-Docker-TravisCI -f Dockerfile.dev .
